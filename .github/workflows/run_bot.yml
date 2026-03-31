@@ -1,9 +1,18 @@
 name: Run Y Gyi Bot
 on:
-  repository_dispatch:
-    types: [trigger-bot]
+  workflow_dispatch:
+    inputs:
+      game_id:
+        description: 'MLBB Game ID'
+        required: true
+      server_id:
+        description: 'MLBB Server ID'
+        required: true
 
 jobs:
+  run-bot:
+    # ... (ကျန်တဲ့ code တွေက အရင်အတိုင်းပဲ ထားပါ)
+
   run-bot:
     runs-on: ubuntu-latest
     steps:
